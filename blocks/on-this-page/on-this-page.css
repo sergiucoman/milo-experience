@@ -1,0 +1,47 @@
+.on-this-page {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+/* any direct or indirect ul descendant of navi */
+.on-this-page ul {
+    list-style-type: none;
+    padding: 4px;
+    border: 4px;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.on-this-page li {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.on-this-page a:hover {
+    background-color: #f0f0f0;
+}
+
+/* children of .on-this-page that are li and have class is-padded-left-big */
+.on-this-page li.is-padded-left-big {
+    padding-left: 1rem !important;
+}
+
+.on-this-page a {
+    margin-left: 1rem !important;
+    color: #505050;
+    text-decoration: none;
+    cursor: default;
+    display: inline-block;
+    padding: 0.25rem;
+}
+
+.on-this-page h2 {
+    /* upper case */
+    text-transform: uppercase;
+}

@@ -6,3 +6,11 @@
  * 
  *
  */
+
+ /* div with class section uses layout grid */
+.section:has(.navi){  
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,2.5fr) minmax(0,15rem);
+    grid-template-areas: "navi main toc";
+}
+

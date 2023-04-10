@@ -12,6 +12,8 @@
 
 import { setLibs } from './utils.js';
 
+
+
 // Add project-wide style path here.
 const STYLES = '';
 
@@ -47,7 +49,7 @@ const CONFIG = {
 const miloLibs = setLibs(LIBS);
 
 (function loadStyles() {
-  const paths = [`${miloLibs}/styles/styles.css`];
+  const paths = ['/styles/styles.css',`${miloLibs}/styles/styles.css`];
   if (STYLES) { paths.push(STYLES); }
   paths.forEach((path) => {
     const link = document.createElement('link');
@@ -57,10 +59,28 @@ const miloLibs = setLibs(LIBS);
   });
 }());
 
+// export function getRootPath() {
+//   return ``;
+// }
+
+// async function loadGnav() {
+//   const { loadBlock} = await import(`${miloLibs}/utils/utils.js`);
+
+//   const main = document.querySelector('main');
+
+//   /* load gnav */
+//   const header = document.querySelector('header');
+//   const gnavPath = `${getRootPath()}/gnav`;
+//   header.setAttribute('data-block-name', 'gnav');
+//   header.setAttribute('data-gnav-source', gnavPath);
+//   loadBlock(header);
+// }
+
 (async function loadPage() {
   const { loadArea, loadDelayed, setConfig } = await import(`${miloLibs}/utils/utils.js`);
 
   setConfig({ ...CONFIG, miloLibs });
   await loadArea();
+  // loadGnav();
   loadDelayed();
 }());

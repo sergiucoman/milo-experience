@@ -1,0 +1,31 @@
+
+
+.note {
+    border-color: blue;
+    color: #000;
+    padding: 1rem;
+    border: 1px solid #1e1e1e;
+    border-left-width: 3rem;
+    border-color: blue;
+    margin-bottom: 2rem !important;
+}
+
+.note>div:first-child:before {
+    content: "";
+    /* set background svg as inverted exclamation mark in a circle */
+    /* color of the circle is black*/
+    /* color of the exclamation mark is white */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23000' d='M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 14.4c-3.5 0-6.4-2.9-6.4-6.4S4.5 1.6 8 1.6 14.4 4.5 14.4 8 11.5 14.4 8 14.4zm.8-10.8h-1.6v6.4h1.6V3.6zm0 8.8h-1.6v1.6h1.6V12.4z'/%3E%3C/svg%3E");
+    
+    background-size: cover;
+    resize: both;
+    display: inline-block;
+    height: 16px !important;
+    width: 16px !important;
+    margin-right: 0.25rem;
+}
+
+/* to upper case the text of the note */
+.note>div:first-child {
+    text-transform: uppercase;
+}
